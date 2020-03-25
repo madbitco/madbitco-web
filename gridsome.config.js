@@ -25,12 +25,12 @@ module.exports = {
   },
   icon: {
     favicon: {
-      src: "./src/images/favicon/favicon.png",
+      src: "./src/images/favicon/favicon-196x196.png",
       sizes: [16, 32, 96, 128, 196]
     },
     touchicon: {
-      src: "./src/my-touchicon.png",
-      sizes: [76, 152, 120, 167],
+      src: "./src/images/favicon/apple-touch-icon-152x152.png",
+      sizes: [72, 76, 114, 120, 144, 152],
       precomposed: true
     }
   },
