@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout mainClass="bg-alt flex flex-column justify-between min-vh-100-m">
     <section class="white">
       <div class="ml-auto mr-auto mw8 pv4-m pb3-l ph3 ph4-ns ph5-m">
         <h1 class="f3 f2-m normal measure-vtight">

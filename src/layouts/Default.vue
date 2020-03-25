@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-alt flex flex-column justify-between min-vh-100-m">
+  <main :class="mainClass">
     <header class="header" id="header">
       <div class="header-wrapper">
         <div class="header-container">
@@ -25,11 +25,8 @@
                     >
                   </li>
                   <li class="menu--item">
-                    <g-link
-                      to="/contact/"
-                      class="menu--link"
-                      active-class="active"
-                      >Contact</g-link
+                    <a href="mailto:hello@madbit.co" class="menu--link"
+                      >Contact</a
                     >
                   </li>
                 </ul>
@@ -48,7 +45,7 @@
       >
         <div class="w-100 w-50-m mv3-m flex items-center pt3 pt0-m">
           <div class="pt1">
-            <LogoSVG />
+            <LogoBottomSVG />
           </div>
           <div>
             <p class="mv2 f7 lh-title measure-tight">
@@ -89,17 +86,26 @@
 </template>
 
 <script>
-import LogoSVG from "~/images/icons/madbit-logo.svg";
-import TwitterSVG from "~/images/icons/twitter.svg";
-import GithubSVG from "~/images/icons/github.svg";
-import LinkedinSVG from "~/images/icons/linkedin.svg";
+import LogoSVG from "~/icons/madbit-logo.svg";
+import LogoBottomSVG from "~/icons/madbit-logo-bottom.svg";
+import TwitterSVG from "~/icons/twitter.svg";
+import GithubSVG from "~/icons/github.svg";
+import LinkedinSVG from "~/icons/linkedin.svg";
 
 export default {
   components: {
     LogoSVG,
+    LogoBottomSVG,
     TwitterSVG,
     GithubSVG,
     LinkedinSVG
+  },
+  props: {
+    mainClass: {
+      type: String,
+      required: false,
+      default: null
+    }
   }
 };
 </script>
