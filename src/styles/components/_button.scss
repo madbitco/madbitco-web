@@ -1,0 +1,104 @@
+@mixin button {
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  font-family: $font-family;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 12px 0 rgba($brand-charcoal, 0.15);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  @include button;
+  display: inline-block;
+  padding: 0.75em 1em;
+  background-color: $brand-blue;
+  color: $white;
+  transition: opacity ease 0.3s;
+
+  &:visited {
+    color: inherit;
+    background-color: inherit;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+  color: $white;
+}
+
+.btn-positive {
+  background-color: $brand-success;
+  color: $white;
+}
+
+.btn-std {
+  background-color: $brand-titanium;
+  color: $white;
+}
+
+.btn-ghost {
+  @include button;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $brand-titanium;
+  padding-left: 0.65rem;
+  padding-right: 0.4rem;
+  padding-top: 0.333rem;
+  padding-bottom: 0.333rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  box-shadow: none;
+  color: $text-color;
+  background-color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin: 0;
+
+  &::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    content: "→";
+    transition: 0.2s margin ease;
+  }
+
+  &:hover {
+    background-color: $text-color;
+    border-color: $text-color;
+    color: $white;
+
+    &::after {
+      margin-left: 0.75rem;
+    }
+  }
+}
+
+a:link,
+a:visited {
+  &.btn {
+    @include button;
+    color: $white;
+    background-color: $brand-blue;
+  }
+}
+
+a:link,
+a:visited {
+  &.btn-primary {
+    background-color: $brand-primary;
+    color: $white;
+  }
+}

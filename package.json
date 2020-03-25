@@ -1,0 +1,22 @@
+{
+  "name": "madbitco-web",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "modularscale-sass": "^3.0.10",
+    "node-sass": "^4.13.1",
+    "normalize-scss": "^7.0.1",
+    "postcss-discard-duplicates": "^4.0.2",
+    "postcss-easing-gradients": "^3.0.1",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^8.0.2",
+    "tachyons-sass": "^4.9.5",
+    "typi": "^3.2.0",
+    "vue-svg-loader": "^0.16.0"
+  }
+}

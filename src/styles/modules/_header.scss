@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// Top Header
+// -----------------------------------------------------------------------------
+.header-sticky {
+  top: 0;
+  position: fixed;
+}
+
+.header {
+  // width: 100vw;
+  background-color: $body-bg-alt;
+
+  .header-wrapper {
+    max-width: $xl;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $body-bg-alt;
+  }
+
+  .header-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $lg;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+
+    @include mq($sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @include mq($md) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    @include mq($lg) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @include mq($xl) {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+
+  .logo {
+    display: inline-flex;
+    margin-left: 0.25rem;
+    color: $white;
+    text-decoration: none;
+    z-index: 10;
+    border: 0;
+
+    &:hover {
+      .bot-eyes {
+        transition:
+          transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          fill 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        fill: $white;
+        transform: translateY(-1px);
+      }
+    }
+
+    @include mq($md) {
+      margin-left: -0.5rem;
+    }
+  }
+
+  .logo--glyph {
+    flex: 1;
+    display: inline-flex;
+  }
+
+  .logo--text {
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 1rem;
+    align-self: center;
+  }
+}

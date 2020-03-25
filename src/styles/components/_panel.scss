@@ -1,0 +1,36 @@
+.panel {
+  width: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel-centred {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel--photo {
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow:
+    inset rgba($white, 0.2) 0 1px 0,
+    rgba($black, 0.2) 0 1px 4px;
+  transition: 0.25s transform cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    transform: scale(1.125);
+  }
+}
+
+.panel-splash {
+  @include mq($lg) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

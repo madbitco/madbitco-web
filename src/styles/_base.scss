@@ -1,0 +1,535 @@
+// Basic declarations and overrides
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga", "clig";
+}
+
+body {
+  font-family: $font-family;
+  background-repeat: repeat;
+  background-color: $white;
+  color: $brand-charcoal;
+  line-height: 1.5;
+}
+
+h1 {
+  @include typi("h1");
+  margin-top: 0.666em;
+  margin-bottom: 0.666em;
+  font-weight: 800;
+
+  @include mq($md) {
+    letter-spacing: -1px;
+  }
+}
+
+h2 {
+  @include typi("h2");
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  font-weight: 800;
+
+  @include mq($md) {
+    letter-spacing: -0.5px;
+  }
+}
+
+h3 {
+  @include typi("h3");
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 800;
+}
+
+h4 {
+  @include typi("h4");
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  font-weight: 800;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  & + p {
+    margin-top: 1em;
+  }
+}
+
+.content,
+.content-long {
+  a {
+    color: $text-color;
+    text-decoration: none;
+    border-bottom: 1px solid $brand-primary;
+
+    &:visited {
+      border-bottom-color: desaturate($brand-primary, 10%);
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+      border-bottom-color: $brand-alt;
+    }
+  }
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style-type: square;
+}
+
+figure {
+  &:only-child {
+    margin-bottom: 0;
+  }
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+  margin: 0;
+
+  figcaption {
+    color: $grey-dark;
+    font-size: 0.875rem;
+    font-style: italic;
+    border-top: 1px solid $grey-lighter;
+    padding-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+blockquote {
+  border-left: 0.25rem solid $brand-primary;
+  margin-left: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  max-width: $measure-normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+hr {
+  margin: 2.5rem auto 2.125rem;
+  background-color: $white;
+  border: 0;
+  border-top: 2px solid $brand-titanium;
+  width: 60%;
+}
+
+.inline {
+  a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+}
+
+.link-back {
+  color: $brand-titanium;
+  text-decoration: none;
+  transition: 0.1s color ease;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+.link-dark {
+  color: $near-white;
+  text-decoration: none;
+  transition: 0.1s color ease;
+  font-size: 4.5vh;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  transition: 0.25s padding cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    0.25s color cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @include mq-custom("min-height: 64em") {
+    font-size: 2rem;
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    display: block;
+    height: 0.1em;
+    width: 0;
+    background-color: $brand-primary;
+    will-change: width;
+    transition: 0.25s width cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    content: "";
+  }
+
+  &:hover {
+    padding-left: 0.5em;
+    color: rgba($white, 1);
+    &::after {
+      width: calc(100% - 0.5em);
+    }
+  }
+}
+
+.section-header {
+  .link-back {
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+.link-footer {
+  color: $brand-titanium;
+  border-bottom: 1px solid $transparent;
+  text-decoration: none;
+  transition: 0.1s border-color ease;
+
+  &:hover {
+    border-bottom-color: $brand-primary;
+  }
+}
+
+.link-arrow {
+  border-bottom-color: transparent;
+
+  &::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    content: "→";
+    transition: 0.2s margin ease;
+  }
+
+  &:hover {
+    &::after {
+      margin-left: 0.75rem;
+    }
+  }
+}
+
+.link-sm {
+  border-bottom: 0;
+
+  &:link,
+  &:visited,
+  &:active {
+    border-bottom: 0;
+    fill: #546270;
+  }
+
+  &.github {
+    &:hover {
+      svg {
+        fill: #333;
+      }
+    }
+  }
+
+  &.twitter {
+    &:hover {
+      svg {
+        fill: #1da1f2;
+      }
+    }
+  }
+
+  &.behance {
+    &:hover {
+      svg {
+        fill: #1769ff;
+      }
+    }
+  }
+
+  &.linkedin {
+    &:hover {
+      svg {
+        fill: #0077b5;
+      }
+    }
+  }
+}
+
+.content-long {
+  h2 {
+    @include typi("h3");
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    letter-spacing: 0;
+    font-weight: 800;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.untracked {
+  letter-spacing: 0;
+}
+
+.divider {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid lighten($brand-titanium, 40%);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "•";
+    font-size: 0.875rem;
+    line-height: 1;
+    top: -1rem;
+    left: calc(50% - 1rem);
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0.5rem;
+    color: $brand-primary;
+    background-color: $white;
+  }
+}
+
+.golden-lining {
+  color: lighten($brand-titanium, 20%);
+  border-bottom: 1px solid $brand-warning;
+}
+
+.heading {
+  display: inline-block;
+  &::after {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: 0.25rem;
+    background-color: $brand-primary;
+    content: "";
+  }
+}
+
+// TODO: Backport to Madsauce
+// ---------------------------
+@mixin container-dark {
+  color: lighten($brand-titanium, 30%);
+  background-color: $brand-charcoal;
+  background-image: linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
+  background-blend-mode: overlay;
+}
+
+.heading-splash {
+  color: $white;
+  background-color: $brand-charcoal;
+  // background-image: linear-gradient(12deg, $brand-dark, cubic-bezier(0.48, 0.30, 0.64, 1.00), $brand-titanium);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  transform: skewY(-12deg);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $lg;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+
+  @include mq($md) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @include mq($lg) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.container-lg {
+  max-width: $xl;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.h-link {
+  color: $brand-primary;
+  text-decoration: none;
+  border-bottom: 1px solid $transparent;
+  transition: 0.1s border-color ease;
+
+  &:visited {
+    color: desaturate($brand-primary, 10%);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $brand-primary;
+    text-decoration: none;
+    border-bottom-color: $brand-alt;
+  }
+}
+
+.faded-white {
+  color: rgba($white, 0.6);
+}
+
+.light-titanium {
+  color: lighten($brand-titanium, 10%);
+}
+
+.titanium {
+  color: $brand-titanium;
+}
+
+.charcoal {
+  color: $brand-charcoal;
+}
+
+.bg-titanium {
+  background-color: $brand-titanium;
+}
+
+.bg-charcoal {
+  background-color: $brand-charcoal;
+}
+
+.bg-alt {
+  background-color: $body-bg-alt;
+}
+
+.bg-alt-white {
+  background-color: $near-white;
+}
+
+.b--light-titanium {
+  border-color: lighten($brand-titanium, 40%);
+}
+
+.b--alt-white {
+  border-color: $near-white;
+}
+
+.content-col-twin {
+  @include mq($md) {
+    columns: 2 auto;
+    column-gap: 1rem;
+  }
+
+  @include mq($lg) {
+    column-gap: 3rem;
+  }
+}
+
+.hero-bg {
+  &::after {
+    display: block;
+    position: absolute;
+    background-color: darken($brand-charcoal, 25%);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 1;
+  }
+}
+
+.tile-link {
+  &:hover {
+    .tile-bg {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.tile-bg {
+  // background-size: cover;
+  transition: 0.3s transform ease;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.tile-text {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    cubic-bezier(0.48, 0.3, 0.64, 1),
+    rgba(0, 0, 0, 0.8)
+  );
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tile-bg-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.post-card-sm {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    .btn-ghost {
+      background-color: $text-color;
+      border-color: $text-color;
+      color: $white;
+
+      &::after {
+        margin-left: 0.75rem;
+      }
+    }
+  }
+}
+
+.kg-card-markdown {
+  p:first-child {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+}
