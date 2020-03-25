@@ -18,18 +18,18 @@
           </p>
           <ul class="list pa0 flex-m flex-wrap mw7 mw8-l">
             <li class="w-50-m mv2">
-              <g-link to="/work/poedit" class="link-dark">poedit.net</g-link>
+              <g-link to="/work/poedit/" class="link-dark">poedit.net</g-link>
             </li>
             <li class="w-50-m mv2">
-              <g-link to="/work/printdesigns" class="link-dark"
+              <g-link to="/work/printdesigns/" class="link-dark"
                 >printdesigns.com</g-link
               >
             </li>
             <li class="w-50-m mv2">
-              <g-link to="/work/wfp" class="link-dark">wfp.org</g-link>
+              <g-link to="/work/wfp/" class="link-dark">wfp.org</g-link>
             </li>
             <li class="w-50-m mv2">
-              <g-link to="/work/tigervpn" class="link-dark"
+              <g-link to="/work/tigervpn/" class="link-dark"
                 >tigervpn.com</g-link
               >
             </li>
