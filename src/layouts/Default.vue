@@ -11,9 +11,6 @@
           </g-link>
           <nav class="nav-wrapper">
             <div class="menu">
-              <button type="button" class="nav-trigger" id="js-nav-trigger">
-                Menu
-              </button>
               <div class="main-nav">
                 <ul class="menu--wrap">
                   <li class="menu--item">
