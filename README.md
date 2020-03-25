@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e7d501b-588c-4569-ad41-14e63d8e5455/deploy-status)](https://app.netlify.com/sites/madbitco/deploys)
+
 # MADBIT Co. Homepage
 
 A public homepage for MADBIT Co.
