@@ -50,7 +50,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Product Design Consultancy",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Purposely tiny consultancy helping product people solve the right user problems through ingenious thinking and exceptional product design."
+      }
+    ]
   }
 };
 </script>
