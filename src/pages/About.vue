@@ -24,17 +24,17 @@
               <h4 class="mv0 ttu tracked f7 lh-title normal">
                 Projects delivered
               </h4>
-              <p class="f1 mb3 lh-title b">15</p>
+              <p class="f1 mb3 lh-title b">20+</p>
             </div>
             <div class="mv3 mb0-ns w-100 w-33-ns pr3-m tc">
               <h4 class="mv0 ttu tracked f7 lh-title normal">
                 Years in business
               </h4>
-              <p class="f1 mb3 lh-title b">2</p>
+              <p class="f1 mb3 lh-title b">4</p>
             </div>
             <div class="mv3 mb0-ns w-100 w-33-ns pr3-m tc">
               <h4 class="mv0 ttu tracked f7 lh-title normal">Avg client ROI</h4>
-              <p class="f1 mb3 lh-title"><span class="b">5:1</span></p>
+              <p class="f1 mb3 lh-title"><span class="b">8:1</span></p>
             </div>
           </div>
         </div>
