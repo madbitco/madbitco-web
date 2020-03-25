@@ -126,10 +126,13 @@
         <figcaption>Homepage illustration for PoEdit by Adrian Lam</figcaption>
       </figure>
     </section>
+
+    <Contact />
   </Layout>
 </template>
 
 <script>
+import Contact from "~/components/Contact";
 export default {
   metaInfo: {
     title: "Case Study: PoEdit",
@@ -141,6 +144,9 @@ export default {
           "Improving customer acquisition through meaningful product presentation."
       }
     ]
+  },
+  components: {
+    Contact
   }
 };
 </script>
