@@ -197,10 +197,13 @@
         </div>
       </div>
     </section>
+
+    <Contact />
   </Layout>
 </template>
 
 <script>
+import Contact from "~/components/Contact";
 export default {
   metaInfo: {
     title: "Who we are",
@@ -212,6 +215,9 @@ export default {
           "We are consultants for product people: entrepreneurs, owners, managers. We take their existing software products through a battle-tested diagnostic process to help them regain focus on solving the right problems for their audience, making them better."
       }
     ]
+  },
+  components: {
+    Contact
   }
 };
 </script>
